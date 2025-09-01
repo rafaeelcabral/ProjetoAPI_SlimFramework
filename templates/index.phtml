@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minha API - Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                background: linear-gradient(135deg, #001f4d, #002966); /* navy */
+                color: #ffd700; /* gold */
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card {
+                background: rgba(0, 0, 0, 0.8);
+                border-radius: 15px;
+                padding: 2rem;
+                width: 100%;
+                max-width: 700px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            }
+
+            h1 {
+                font-weight: 700;
+                margin-bottom: 1rem;
+                color: white;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+                color: white;
+            }
+
+            p {
+                font-size: 1rem;
+                color: white;
+            }
+
+            code {
+                background-color: rgba(255, 255, 255, 0.1);
+                padding: 2px 5px;
+                border-radius: 5px;
+                color: #ffd700;
+            }
+
+            .route {
+                margin-bottom: 1rem;
+                padding: 1rem;
+                background: rgba(255, 215, 0, 0.1);
+                border-left: 4px solid #ffd700;
+                border-radius: 5px;
+            }
+
+            a {
+                color: #ffd700;
+                text-decoration: underline;
+            }
+
+            a:hover {
+                color: #ffec70;
+            }
+
+            li {
+                color: white;
+            }
+
+            strong {
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="card">
+            <h1>Bem-vindo à Minha API</h1>
+            <p>Esta é uma API simples de gerenciamento de produtos, com autenticação via token JWT.</p>
+
+            <h2>Como usar:</h2>
+            <ul>
+                <li>Primeiro, gere seu token enviando email e senha via Postman para <code>/api/gerar_token</code>.</li>
+                <li>Use o token no header <code>Authorization: Bearer SEU_TOKEN</code> para acessar as rotas protegidas.</li>
+            </ul>
+
+            <h2>Rotas disponíveis:</h2>
+
+            <div class="route">
+                <strong>GET <br><br> /api/v1/produtos/get[/{id}]</strong> <br><br>
+                <p>Listar produtos. Se não passar <code>id</code>, retorna todos. Se passar, retorna apenas o produto específico.</p>
+            </div>
+
+            <div class="route">
+                <strong>POST <br><br>  /api/v1/produtos/add</strong> <br><br>
+                <p>Adicionar novo produto. Campos necessários: <code>titulo</code>, <code>descricao</code>, <code>preco</code>, <code>fabricante</code>.</p>
+            </div>
+
+            <div class="route">
+                <strong>PUT <br><br> /api/v1/produtos/update/{id}</strong> <br><br>
+                <p>Atualizar produto existente. Precisa passar o <code>id</code> e os campos que deseja atualizar.</p>
+            </div>
+
+            <div class="route">
+                <strong>DELETE <br><br> /api/v1/produtos/delete/{id}</strong> <br><br>
+                <p>Remover produto existente. Precisa passar o <code>id</code> na URL.</p>
+            </div>
+
+            <p class="mt-4">Feito para estudo e aprendizado de Slim, JWT e Eloquent ORM.</p>
+        </div>
+    </body>
+
+</html>
