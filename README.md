@@ -62,31 +62,13 @@ header Authorization do Postman:
 
 **Base:** `/api/v1/produtos`
 
-  ------------------------------------------------------------------------
-  Método           Rota                             Descrição
-  ---------------- -------------------------------- ----------------------
-  GET              `/get[/{id}]`                    Listar produtos. Se
-                                                    não passar id, retorna
-                                                    todos. Se passar id,
-                                                    retorna apenas o
-                                                    produto específico.
+| Método | Rota             | Descrição |
+|-------|-------------------|-----------|
+| GET   | `/get[/{id}]`     | Listar produtos. Se não passar `id`, retorna todos. Se passar `id`, retorna apenas o produto específico. |
+| POST  | `/add`            | Adicionar novo produto. Precisa passar: `titulo`, `descricao`, `preco` e `fabricante`. |
+| PUT   | `/update/{id}`    | Atualizar produto existente. Precisa passar `id` na URL e os campos que deseja atualizar. |
+| DELETE| `/delete/{id}`    | Remover produto. Precisa passar `id` na URL. |
 
-  POST             `/add`                           Adicionar novo
-                                                    produto. Precisa
-                                                    passar: titulo,
-                                                    descricao, preco e
-                                                    fabricante.
-
-  PUT              `/update/{id}`                   Atualizar produto
-                                                    existente. Precisa
-                                                    passar id na URL e os
-                                                    campos que deseja
-                                                    atualizar.
-
-  DELETE           `/delete/{id}`                   Remover produto.
-                                                    Precisa passar id na
-                                                    URL.
-  ------------------------------------------------------------------------
 
 
 ## ⚙️ Observações
