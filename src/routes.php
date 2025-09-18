@@ -12,12 +12,12 @@
 
     //--------------------------------------------
 
-    //Rota Principal
+    //Rota de Interface
     $app->get('/', function($request, $response, $args) {
         return $this->renderer->render($response, 'index.phtml');
     });
 
-    //Gerar Token para Usuario
+    //Usuarios
     require __DIR__ . '/routes/get_token.php';
 
     //Produtos
